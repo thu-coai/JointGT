@@ -1,2 +1,2 @@
-# JointGT
-Codes for our paper "JointGT: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs" (ACL 2021 Findings)
+# JointGT: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs
+Codes for our paper will be released in a few days before the conference.
