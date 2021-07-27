@@ -18,11 +18,11 @@ JointGT is a graph-text joint pre-training framework with structure-aware encodi
 
 ### Datasets
 
-Our experiments contain four downstream datasets, i.e., WebNLG(U), WebNLG(C), WebQuestions, and PathQuestions. The raw data of these datasets are from the GitHub repositories of [KGPT](https://github.com/wenhuchen/KGPT), [WebNLG](https://gitlab.com/shimorina/webnlg-dataset/), and [BiGGNN](https://github.com/hugochan/Graph2Seq-for-KGQG). You can download the pre-processed datasets used in our paper on [Tsinghua Cloud]().
+Our experiments contain four downstream datasets, i.e., WebNLG(U), WebNLG(C), WebQuestions, and PathQuestions. The raw data of these datasets are from the GitHub repositories of [KGPT](https://github.com/wenhuchen/KGPT), [WebNLG](https://gitlab.com/shimorina/webnlg-dataset/), and [BiGGNN](https://github.com/hugochan/Graph2Seq-for-KGQG). You can download the pre-processed datasets used in our paper on [Google Drive](https://drive.google.com/drive/folders/1FGThWaTUs1cLvkd_GHCFV8mQEDW6qfIK?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/79b009058cce484fa736/).
 
 ### Fine-tuning
 
-You can download the checkpoint of our pre-trained model ([Tsinghua Cloud]()), and fine-tune the pre-trained model on four datasets.
+You can download the checkpoint of our pre-trained model ([Google Drive](https://drive.google.com/drive/folders/1FGThWaTUs1cLvkd_GHCFV8mQEDW6qfIK?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/79b009058cce484fa736/)), and fine-tune the pre-trained model on four datasets.
 
 ```shell
 bash finetune_jointgt_bart.sh
@@ -53,7 +53,7 @@ bash pretrain_jointgt_bart.sh
 bash pretrain_jointgt_t5.sh
 ```
 
-In the scripts, `--model_path` and `--tokenizer_path` are set to the downloaded BART / T5 checkpoint. The settings of`--train_file`, `--predict_file` and `--knowledge_file` depend on the path of datasets and knowledge graphs from KGPT.
+In the scripts, `--model_path` and `--tokenizer_path` are set to the downloaded BART / T5 checkpoint. The settings of`--train_file`, `--predict_file` and `--knowledge_file` depend on the directories of datasets and knowledge graphs from KGPT.
 
 ## Evaluation
 
@@ -71,7 +71,7 @@ cd eval_for_wqpq
 python eval.py --src ${source_path} --tgt ${reference_path} --out ${model_output_path}
 ```
 
-During evaluation, `model_output_path` can be set to the generated file when running our inference codes. `source_path` can be set to `test.source` / `src-test.txt` in our pre-processed datasets. `reference_path` can be set to `test.target` / `tgt-test.txt` in our pre-processed datasets. More details can refer to the original repositories.
+During evaluation, `model_output_path` can be set to the generated file when running our inference codes. `source_path` can be set to `test.source` / `src-test.txt` in our pre-processed datasets. `reference_path` can be set to `test.target` / `tgt-test.txt` in our pre-processed datasets. Refer to the original repositories for more details.
 
 ## Citation
 
